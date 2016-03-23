@@ -1,0 +1,5 @@
+C:\Users\Kenneth\Documents\GitHub\FCS_Funding_Tests\FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests\bin\Debug\FCS_Funding_Coded_UI_Tests.dll
+C:\Users\Kenneth\Documents\GitHub\FCS_Funding_Tests\FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests\bin\Debug\FCS_Funding_Coded_UI_Tests.pdb
+C:\Users\Kenneth\Documents\GitHub\FCS_Funding_Tests\FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests\obj\Debug\FCS_Funding_Coded_UI_Tests.csprojResolveAssemblyReference.cache
+C:\Users\Kenneth\Documents\GitHub\FCS_Funding_Tests\FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests\obj\Debug\FCS_Funding_Coded_UI_Tests.dll
+C:\Users\Kenneth\Documents\GitHub\FCS_Funding_Tests\FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests\obj\Debug\FCS_Funding_Coded_UI_Tests.pdb

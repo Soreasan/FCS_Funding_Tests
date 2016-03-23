@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCS_Funding_Coded_UI_Tests", "FCS_Funding_Coded_UI_Tests\FCS_Funding_Coded_UI_Tests.csproj", "{FB5EBD5F-EC2D-47E3-82A9-E929CF20067B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB5EBD5F-EC2D-47E3-82A9-E929CF20067B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5EBD5F-EC2D-47E3-82A9-E929CF20067B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5EBD5F-EC2D-47E3-82A9-E929CF20067B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5EBD5F-EC2D-47E3-82A9-E929CF20067B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
