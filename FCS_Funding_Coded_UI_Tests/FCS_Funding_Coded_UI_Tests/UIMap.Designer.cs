@@ -161,6 +161,326 @@ namespace FCS_Funding_Coded_UI_Tests
             Mouse.Click(uIRefreshButton, new Point(210, 34));
         }
         
+        /// <summary>
+        /// Inserted an individual donor.
+        /// </summary>
+        public void TestInsertDonorIndividual()
+        {
+            #region Variable Declarations
+            WpfEdit uIUsernameEdit = this.UILoginWindow.UIUsernameEdit;
+            WpfEdit uIPasswordEdit = this.UILoginWindow.UIPasswordEdit;
+            WpfButton uILoginButton = this.UILoginWindow.UILoginButton;
+            WpfTabPage uIDonorsTabPage = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage;
+            WpfButton uICreateNewDonorButton = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage.UICreateNewDonorButton;
+            WpfEdit uIItemEdit = this.UICreateNewDonorWindow.UIItemEdit;
+            WpfEdit uIItemEdit1 = this.UICreateNewDonorWindow.UIItemEdit1;
+            WpfEdit uIItemEdit2 = this.UICreateNewDonorWindow.UIItemEdit2;
+            WpfEdit uIItemEdit3 = this.UICreateNewDonorWindow.UIItemEdit3;
+            WpfWindow uICreateNewDonorWindow = this.UICreateNewDonorWindow;
+            WpfComboBox uIDTypeComboBox = this.UICreateNewDonorWindow.UIDTypeComboBox;
+            WpfButton uIAddDonorButton = this.UICreateNewDonorWindow.UIAddDonorButton;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            WpfEdit uIItemEdit4 = this.UICreateIndividualContWindow.UIItemEdit;
+            WpfEdit uIItemEdit11 = this.UICreateIndividualContWindow.UIItemEdit1;
+            WpfEdit uIItemEdit21 = this.UICreateIndividualContWindow.UIItemEdit2;
+            WpfEdit uIItemEdit31 = this.UICreateIndividualContWindow.UIItemEdit3;
+            WpfButton uIAddContactButton = this.UICreateIndividualContWindow.UIAddContactButton;
+            WpfTabPage uIInKindItemTabPage = this.UIMainWindowWindow.UIItemTabList.UIInKindItemTabPage;
+            WinButton uICloseButton = this.UIMainWindowWindow1.UICloseButton;
+            #endregion
+
+            // Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+            ApplicationUnderTest uILoginWindow = ApplicationUnderTest.Launch(this.TestInsertDonorIndividualParams.UILoginWindowExePath, this.TestInsertDonorIndividualParams.UILoginWindowAlternateExePath);
+
+            // Type 'admin' in 'Username' text box
+            uIUsernameEdit.Text = this.TestInsertDonorIndividualParams.UIUsernameEditText;
+
+            // Type '{Tab}' in 'Username' text box
+            Keyboard.SendKeys(uIUsernameEdit, this.TestInsertDonorIndividualParams.UIUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'Password' text box
+            Keyboard.SendKeys(uIPasswordEdit, this.TestInsertDonorIndividualParams.UIPasswordEditSendKeys, true);
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(124, 38));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(148, 50));
+
+            // Click 'Create New Donor' button
+            Mouse.Click(uICreateNewDonorButton, new Point(187, 36));
+
+            // Type '123 Miracle St' in text box numbered 2 in 'CreateNewDonor' window
+            uIItemEdit.Text = this.TestInsertDonorIndividualParams.UIItemEditText;
+
+            // Type 'UT' in text box numbered 4 in 'CreateNewDonor' window
+            uIItemEdit1.Text = this.TestInsertDonorIndividualParams.UIItemEdit1Text;
+
+            // Type '{Tab}' in text box numbered 4 in 'CreateNewDonor' window
+            Keyboard.SendKeys(uIItemEdit1, this.TestInsertDonorIndividualParams.UIItemEdit1SendKeys, ModifierKeys.None);
+
+            // Type 'North Salt Lake' in text box numbered 5 in 'CreateNewDonor' window
+            uIItemEdit2.Text = this.TestInsertDonorIndividualParams.UIItemEdit2Text;
+
+            // Type '{Tab}' in text box numbered 5 in 'CreateNewDonor' window
+            Keyboard.SendKeys(uIItemEdit2, this.TestInsertDonorIndividualParams.UIItemEdit2SendKeys, ModifierKeys.None);
+
+            // Type '84054' in text box numbered 6 in 'CreateNewDonor' window
+            uIItemEdit3.Text = this.TestInsertDonorIndividualParams.UIItemEdit3Text;
+
+            // Click 'CreateNewDonor' window
+            Mouse.Click(uICreateNewDonorWindow, new Point(1199, 700));
+
+            // Select 'Individual' in 'dType' combo box
+            uIDTypeComboBox.SelectedItem = this.TestInsertDonorIndividualParams.UIDTypeComboBoxSelectedItem;
+
+            // Click 'CreateNewDonor' window
+            Mouse.Click(uICreateNewDonorWindow, new Point(946, 888));
+
+            // Click 'Add Donor' button
+            Mouse.Click(uIAddDonorButton, new Point(136, 32));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(32, 24));
+
+            // Type 'Santa' in text box
+            uIItemEdit4.Text = this.TestInsertDonorIndividualParams.UIItemEditText1;
+
+            // Type '{Tab}' in text box
+            Keyboard.SendKeys(uIItemEdit4, this.TestInsertDonorIndividualParams.UIItemEditSendKeys, ModifierKeys.None);
+
+            // Type 'Claus' in text box numbered 2 in 'CreateIndividualContact' window
+            uIItemEdit11.Text = this.TestInsertDonorIndividualParams.UIItemEdit1Text1;
+
+            // Type '{Tab}' in text box numbered 2 in 'CreateIndividualContact' window
+            Keyboard.SendKeys(uIItemEdit11, this.TestInsertDonorIndividualParams.UIItemEdit1SendKeys1, ModifierKeys.None);
+
+            // Type '8017776666' in text box numbered 3 in 'CreateIndividualContact' window
+            uIItemEdit21.Text = this.TestInsertDonorIndividualParams.UIItemEdit2Text1;
+
+            // Type 'pwnzanator@pwned.me' in text box numbered 4 in 'CreateIndividualContact' window
+            uIItemEdit31.Text = this.TestInsertDonorIndividualParams.UIItemEdit3Text1;
+
+            // Click 'Add Contact' button
+            Mouse.Click(uIAddContactButton, new Point(131, 39));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(77, 20));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(53, 18));
+
+            // Click 'In-Kind Item' tab
+            Mouse.Click(uIInKindItemTabPage, new Point(94, 30));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(165, 35));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(31, 36));
+        }
+        
+        /// <summary>
+        /// Inserted a donor with no data.
+        /// </summary>
+        public void TestInsertDonorAnonymous()
+        {
+            #region Variable Declarations
+            WpfEdit uIUsernameEdit = this.UILoginWindow.UIUsernameEdit;
+            WpfEdit uIPasswordEdit = this.UILoginWindow.UIPasswordEdit;
+            WpfButton uILoginButton = this.UILoginWindow.UILoginButton;
+            WpfTabPage uIDonorsTabPage = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage;
+            WpfButton uICreateNewDonorButton = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage.UICreateNewDonorButton;
+            WpfComboBox uIDTypeComboBox = this.UICreateNewDonorWindow.UIDTypeComboBox;
+            WpfButton uIAddDonorButton = this.UICreateNewDonorWindow.UIAddDonorButton;
+            WpfTabPage uIInKindItemTabPage = this.UIMainWindowWindow.UIItemTabList.UIInKindItemTabPage;
+            WinButton uICloseButton = this.UIMainWindowWindow1.UICloseButton;
+            #endregion
+
+            // Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+            ApplicationUnderTest uILoginWindow = ApplicationUnderTest.Launch(this.TestInsertDonorAnonymousParams.UILoginWindowExePath, this.TestInsertDonorAnonymousParams.UILoginWindowAlternateExePath);
+
+            // Type 'admin' in 'Username' text box
+            uIUsernameEdit.Text = this.TestInsertDonorAnonymousParams.UIUsernameEditText;
+
+            // Type '{Tab}' in 'Username' text box
+            Keyboard.SendKeys(uIUsernameEdit, this.TestInsertDonorAnonymousParams.UIUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'Password' text box
+            Keyboard.SendKeys(uIPasswordEdit, this.TestInsertDonorAnonymousParams.UIPasswordEditSendKeys, true);
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(115, 48));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(105, 28));
+
+            // Click 'Create New Donor' button
+            Mouse.Click(uICreateNewDonorButton, new Point(54, 43));
+
+            // Select 'Anonymous' in 'dType' combo box
+            uIDTypeComboBox.SelectedItem = this.TestInsertDonorAnonymousParams.UIDTypeComboBoxSelectedItem;
+
+            // Click 'Add Donor' button
+            Mouse.Click(uIAddDonorButton, new Point(161, 41));
+
+            // Click 'In-Kind Item' tab
+            Mouse.Click(uIInKindItemTabPage, new Point(154, 20));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(117, 54));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(57, 25));
+        }
+        
+        /// <summary>
+        /// Tested inserting a donor that is a government organization.
+        /// </summary>
+        public void TestInsertDonorGovernment()
+        {
+            #region Variable Declarations
+            WpfEdit uIUsernameEdit = this.UILoginWindow.UIUsernameEdit;
+            WpfEdit uIPasswordEdit = this.UILoginWindow.UIPasswordEdit;
+            WpfButton uILoginButton = this.UILoginWindow.UILoginButton;
+            WpfTabPage uIDonorsTabPage = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage;
+            WpfButton uICreateNewDonorButton = this.UIMainWindowWindow.UIItemTabList.UIDonorsTabPage.UICreateNewDonorButton;
+            WpfEdit uIItemEdit4 = this.UICreateNewDonorWindow.UIItemEdit4;
+            WpfEdit uIItemEdit5 = this.UICreateNewDonorWindow.UIItemEdit5;
+            WpfEdit uIItemEdit = this.UICreateNewDonorWindow.UIItemEdit;
+            WpfEdit uIItemEdit1 = this.UICreateNewDonorWindow.UIItemEdit1;
+            WpfEdit uIItemEdit2 = this.UICreateNewDonorWindow.UIItemEdit2;
+            WpfEdit uIItemEdit3 = this.UICreateNewDonorWindow.UIItemEdit3;
+            WpfComboBox uIDTypeComboBox = this.UICreateNewDonorWindow.UIDTypeComboBox;
+            WpfButton uIAddDonorButton = this.UICreateNewDonorWindow.UIAddDonorButton;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            WpfTabPage uIInKindItemTabPage = this.UIMainWindowWindow.UIItemTabList.UIInKindItemTabPage;
+            WpfWindow uIMainWindowWindow = this.UIMainWindowWindow;
+            WinButton uICloseButton = this.UIMainWindowWindow1.UICloseButton;
+            #endregion
+
+            // Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+            ApplicationUnderTest uILoginWindow = ApplicationUnderTest.Launch(this.TestInsertDonorGovernmentParams.UILoginWindowExePath, this.TestInsertDonorGovernmentParams.UILoginWindowAlternateExePath);
+
+            // Type 'admin' in 'Username' text box
+            uIUsernameEdit.Text = this.TestInsertDonorGovernmentParams.UIUsernameEditText;
+
+            // Type '{Tab}' in 'Username' text box
+            Keyboard.SendKeys(uIUsernameEdit, this.TestInsertDonorGovernmentParams.UIUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'Password' text box
+            Keyboard.SendKeys(uIPasswordEdit, this.TestInsertDonorGovernmentParams.UIPasswordEditSendKeys, true);
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(61, 38));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(157, 37));
+
+            // Click 'Create New Donor' button
+            Mouse.Click(uICreateNewDonorButton, new Point(192, 27));
+
+            // Type 'Hill Air Force Base' in text box
+            uIItemEdit4.Text = this.TestInsertDonorGovernmentParams.UIItemEdit4Text;
+
+            // Type '{Tab}' in text box
+            Keyboard.SendKeys(uIItemEdit5, this.TestInsertDonorGovernmentParams.UIItemEdit5SendKeys, ModifierKeys.None);
+
+            // Type '123 Good Guy Ln' in text box numbered 2 in 'CreateNewDonor' window
+            uIItemEdit.Text = this.TestInsertDonorGovernmentParams.UIItemEditText;
+
+            // Type 'UT' in text box numbered 4 in 'CreateNewDonor' window
+            uIItemEdit1.Text = this.TestInsertDonorGovernmentParams.UIItemEdit1Text;
+
+            // Type '{Tab}' in text box numbered 4 in 'CreateNewDonor' window
+            Keyboard.SendKeys(uIItemEdit1, this.TestInsertDonorGovernmentParams.UIItemEdit1SendKeys, ModifierKeys.None);
+
+            // Type 'Clearfield' in text box numbered 5 in 'CreateNewDonor' window
+            uIItemEdit2.Text = this.TestInsertDonorGovernmentParams.UIItemEdit2Text;
+
+            // Type '{Tab}' in text box numbered 5 in 'CreateNewDonor' window
+            Keyboard.SendKeys(uIItemEdit2, this.TestInsertDonorGovernmentParams.UIItemEdit2SendKeys, ModifierKeys.None);
+
+            // Type '89745' in text box numbered 6 in 'CreateNewDonor' window
+            uIItemEdit3.Text = this.TestInsertDonorGovernmentParams.UIItemEdit3Text;
+
+            // Select 'Government' in 'dType' combo box
+            uIDTypeComboBox.SelectedItem = this.TestInsertDonorGovernmentParams.UIDTypeComboBoxSelectedItem;
+
+            // Click 'Add Donor' button
+            Mouse.Click(uIAddDonorButton, new Point(124, 27));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(19, 16));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(46, 37));
+
+            // Click 'In-Kind Item' tab
+            Mouse.Click(uIInKindItemTabPage, new Point(122, 33));
+
+            // Click 'Donors' tab
+            Mouse.Click(uIDonorsTabPage, new Point(98, 40));
+
+            // Click 'MainWindow' window
+            Mouse.Click(uIMainWindowWindow, new Point(1926, 24));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(47, 23));
+        }
+        
+        /// <summary>
+        /// TestInsertGrantProposalGovernment - Use 'TestInsertGrantProposalGovernmentParams' to pass parameters into this method.
+        /// </summary>
+        public void TestInsertGrantProposalGovernment()
+        {
+            #region Variable Declarations
+            WpfEdit uIUsernameEdit = this.UILoginWindow.UIUsernameEdit;
+            WpfEdit uIPasswordEdit = this.UILoginWindow.UIPasswordEdit;
+            WpfEdit uIItemEdit = this.UICreateGrantProposalWindow.UIItemEdit;
+            #endregion
+
+            // Type 'Admin' in 'Username' text box
+            uIUsernameEdit.Text = this.TestInsertGrantProposalGovernmentParams.UIUsernameEditText;
+
+            // Type '********' in 'Password' text box
+            Keyboard.SendKeys(uIPasswordEdit, this.TestInsertGrantProposalGovernmentParams.UIPasswordEditSendKeys, true);
+
+            // Type 'Loving Government Grant Name' in text box
+            uIItemEdit.Text = this.TestInsertGrantProposalGovernmentParams.UIItemEditText;
+        }
+        
+        /// <summary>
+        /// TestInsertInKindItemGovernment - Use 'TestInsertInKindItemGovernmentParams' to pass parameters into this method.
+        /// </summary>
+        public void TestInsertInKindItemGovernment()
+        {
+            #region Variable Declarations
+            WpfEdit uIUsernameEdit = this.UILoginWindow.UIUsernameEdit;
+            WpfEdit uIPasswordEdit = this.UILoginWindow.UIPasswordEdit;
+            WpfEdit uIItemEdit = this.UIAddInKindItemWindow.UIItemEdit;
+            WpfEdit uIItemEdit1 = this.UIAddInKindItemWindow.UIItemEdit1;
+            #endregion
+
+            // Type 'Admin' in 'Username' text box
+            uIUsernameEdit.Text = this.TestInsertInKindItemGovernmentParams.UIUsernameEditText;
+
+            // Type '{Tab}' in 'Username' text box
+            Keyboard.SendKeys(uIUsernameEdit, this.TestInsertInKindItemGovernmentParams.UIUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'Password' text box
+            Keyboard.SendKeys(uIPasswordEdit, this.TestInsertInKindItemGovernmentParams.UIPasswordEditSendKeys, true);
+
+            // Type 'Sofa' in text box
+            uIItemEdit.Text = this.TestInsertInKindItemGovernmentParams.UIItemEditText;
+
+            // Type '{Tab}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.TestInsertInKindItemGovernmentParams.UIItemEditSendKeys, ModifierKeys.None);
+
+            // Type 'This is a very nice test sofa.  ' in text box numbered 2 in 'AddInKindItem' window
+            uIItemEdit1.Text = this.TestInsertInKindItemGovernmentParams.UIItemEdit1Text;
+        }
+        
         #region Properties
         public virtual LoginTestParams LoginTestParams
         {
@@ -183,6 +503,66 @@ namespace FCS_Funding_Coded_UI_Tests
                     this.mTestInsertPatientParams = new TestInsertPatientParams();
                 }
                 return this.mTestInsertPatientParams;
+            }
+        }
+        
+        public virtual TestInsertDonorIndividualParams TestInsertDonorIndividualParams
+        {
+            get
+            {
+                if ((this.mTestInsertDonorIndividualParams == null))
+                {
+                    this.mTestInsertDonorIndividualParams = new TestInsertDonorIndividualParams();
+                }
+                return this.mTestInsertDonorIndividualParams;
+            }
+        }
+        
+        public virtual TestInsertDonorAnonymousParams TestInsertDonorAnonymousParams
+        {
+            get
+            {
+                if ((this.mTestInsertDonorAnonymousParams == null))
+                {
+                    this.mTestInsertDonorAnonymousParams = new TestInsertDonorAnonymousParams();
+                }
+                return this.mTestInsertDonorAnonymousParams;
+            }
+        }
+        
+        public virtual TestInsertDonorGovernmentParams TestInsertDonorGovernmentParams
+        {
+            get
+            {
+                if ((this.mTestInsertDonorGovernmentParams == null))
+                {
+                    this.mTestInsertDonorGovernmentParams = new TestInsertDonorGovernmentParams();
+                }
+                return this.mTestInsertDonorGovernmentParams;
+            }
+        }
+        
+        public virtual TestInsertGrantProposalGovernmentParams TestInsertGrantProposalGovernmentParams
+        {
+            get
+            {
+                if ((this.mTestInsertGrantProposalGovernmentParams == null))
+                {
+                    this.mTestInsertGrantProposalGovernmentParams = new TestInsertGrantProposalGovernmentParams();
+                }
+                return this.mTestInsertGrantProposalGovernmentParams;
+            }
+        }
+        
+        public virtual TestInsertInKindItemGovernmentParams TestInsertInKindItemGovernmentParams
+        {
+            get
+            {
+                if ((this.mTestInsertInKindItemGovernmentParams == null))
+                {
+                    this.mTestInsertInKindItemGovernmentParams = new TestInsertInKindItemGovernmentParams();
+                }
+                return this.mTestInsertInKindItemGovernmentParams;
             }
         }
         
@@ -245,12 +625,82 @@ namespace FCS_Funding_Coded_UI_Tests
                 return this.mUICreateHouseholdWindow;
             }
         }
+        
+        public UICreateNewDonorWindow UICreateNewDonorWindow
+        {
+            get
+            {
+                if ((this.mUICreateNewDonorWindow == null))
+                {
+                    this.mUICreateNewDonorWindow = new UICreateNewDonorWindow();
+                }
+                return this.mUICreateNewDonorWindow;
+            }
+        }
+        
+        public UICreateIndividualContWindow UICreateIndividualContWindow
+        {
+            get
+            {
+                if ((this.mUICreateIndividualContWindow == null))
+                {
+                    this.mUICreateIndividualContWindow = new UICreateIndividualContWindow();
+                }
+                return this.mUICreateIndividualContWindow;
+            }
+        }
+        
+        public UIMainWindowWindow1 UIMainWindowWindow1
+        {
+            get
+            {
+                if ((this.mUIMainWindowWindow1 == null))
+                {
+                    this.mUIMainWindowWindow1 = new UIMainWindowWindow1();
+                }
+                return this.mUIMainWindowWindow1;
+            }
+        }
+        
+        public UICreateGrantProposalWindow UICreateGrantProposalWindow
+        {
+            get
+            {
+                if ((this.mUICreateGrantProposalWindow == null))
+                {
+                    this.mUICreateGrantProposalWindow = new UICreateGrantProposalWindow();
+                }
+                return this.mUICreateGrantProposalWindow;
+            }
+        }
+        
+        public UIAddInKindItemWindow UIAddInKindItemWindow
+        {
+            get
+            {
+                if ((this.mUIAddInKindItemWindow == null))
+                {
+                    this.mUIAddInKindItemWindow = new UIAddInKindItemWindow();
+                }
+                return this.mUIAddInKindItemWindow;
+            }
+        }
         #endregion
         
         #region Fields
         private LoginTestParams mLoginTestParams;
         
         private TestInsertPatientParams mTestInsertPatientParams;
+        
+        private TestInsertDonorIndividualParams mTestInsertDonorIndividualParams;
+        
+        private TestInsertDonorAnonymousParams mTestInsertDonorAnonymousParams;
+        
+        private TestInsertDonorGovernmentParams mTestInsertDonorGovernmentParams;
+        
+        private TestInsertGrantProposalGovernmentParams mTestInsertGrantProposalGovernmentParams;
+        
+        private TestInsertInKindItemGovernmentParams mTestInsertInKindItemGovernmentParams;
         
         private UILoginWindow mUILoginWindow;
         
@@ -261,6 +711,16 @@ namespace FCS_Funding_Coded_UI_Tests
         private UIOKWindow mUIOKWindow;
         
         private UICreateHouseholdWindow mUICreateHouseholdWindow;
+        
+        private UICreateNewDonorWindow mUICreateNewDonorWindow;
+        
+        private UICreateIndividualContWindow mUICreateIndividualContWindow;
+        
+        private UIMainWindowWindow1 mUIMainWindowWindow1;
+        
+        private UICreateGrantProposalWindow mUICreateGrantProposalWindow;
+        
+        private UIAddInKindItemWindow mUIAddInKindItemWindow;
         #endregion
     }
     
@@ -393,6 +853,297 @@ namespace FCS_Funding_Coded_UI_Tests
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'TestInsertDonorIndividual'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestInsertDonorIndividualParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowExePath = "C:\\Users\\Kenneth\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Proj" +
+            "ect\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowAlternateExePath = "%USERPROFILE%\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Project" +
+            "\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Type 'admin' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditText = "admin";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditSendKeys = "NyBJ9O1fhPe6fVpGjzOJroVoW2H5adUk";
+        
+        /// <summary>
+        /// Type '123 Miracle St' in text box numbered 2 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEditText = "123 Miracle St";
+        
+        /// <summary>
+        /// Type 'UT' in text box numbered 4 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit1Text = "UT";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box numbered 4 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit1SendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'North Salt Lake' in text box numbered 5 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit2Text = "North Salt Lake";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box numbered 5 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit2SendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '84054' in text box numbered 6 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit3Text = "84054";
+        
+        /// <summary>
+        /// Select 'Individual' in 'dType' combo box
+        /// </summary>
+        public string UIDTypeComboBoxSelectedItem = "Individual";
+        
+        /// <summary>
+        /// Type 'Santa' in text box
+        /// </summary>
+        public string UIItemEditText1 = "Santa";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'Claus' in text box numbered 2 in 'CreateIndividualContact' window
+        /// </summary>
+        public string UIItemEdit1Text1 = "Claus";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box numbered 2 in 'CreateIndividualContact' window
+        /// </summary>
+        public string UIItemEdit1SendKeys1 = "{Tab}";
+        
+        /// <summary>
+        /// Type '8017776666' in text box numbered 3 in 'CreateIndividualContact' window
+        /// </summary>
+        public string UIItemEdit2Text1 = "8017776666";
+        
+        /// <summary>
+        /// Type 'pwnzanator@pwned.me' in text box numbered 4 in 'CreateIndividualContact' window
+        /// </summary>
+        public string UIItemEdit3Text1 = "pwnzanator@pwned.me";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestInsertDonorAnonymous'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestInsertDonorAnonymousParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowExePath = "C:\\Users\\Kenneth\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Proj" +
+            "ect\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowAlternateExePath = "%USERPROFILE%\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Project" +
+            "\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Type 'admin' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditText = "admin";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditSendKeys = "NyBJ9O1fhPe6fVpGjzOJroVoW2H5adUk";
+        
+        /// <summary>
+        /// Select 'Anonymous' in 'dType' combo box
+        /// </summary>
+        public string UIDTypeComboBoxSelectedItem = "Anonymous";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestInsertDonorGovernment'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestInsertDonorGovernmentParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowExePath = "C:\\Users\\Kenneth\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Proj" +
+            "ect\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Launch '%USERPROFILE%\Desktop\Spring2016\Software Engineering 3\FCS-Funding-2\FCS-Project\FCS_Funding_WPF\FCS_Funding\bin\Debug\FCS_Funding.exe'
+        /// </summary>
+        public string UILoginWindowAlternateExePath = "%USERPROFILE%\\Desktop\\Spring2016\\Software Engineering 3\\FCS-Funding-2\\FCS-Project" +
+            "\\FCS_Funding_WPF\\FCS_Funding\\bin\\Debug\\FCS_Funding.exe";
+        
+        /// <summary>
+        /// Type 'admin' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditText = "admin";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditSendKeys = "NyBJ9O1fhPe6fVpGjzOJroVoW2H5adUk";
+        
+        /// <summary>
+        /// Type 'Hill Air Force Base' in text box
+        /// </summary>
+        public string UIItemEdit4Text = "Hill Air Force Base";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box
+        /// </summary>
+        public string UIItemEdit5SendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '123 Good Guy Ln' in text box numbered 2 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEditText = "123 Good Guy Ln";
+        
+        /// <summary>
+        /// Type 'UT' in text box numbered 4 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit1Text = "UT";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box numbered 4 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit1SendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'Clearfield' in text box numbered 5 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit2Text = "Clearfield";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box numbered 5 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit2SendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '89745' in text box numbered 6 in 'CreateNewDonor' window
+        /// </summary>
+        public string UIItemEdit3Text = "89745";
+        
+        /// <summary>
+        /// Select 'Government' in 'dType' combo box
+        /// </summary>
+        public string UIDTypeComboBoxSelectedItem = "Government";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestInsertGrantProposalGovernment'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestInsertGrantProposalGovernmentParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Admin' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditText = "Admin";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditSendKeys = "NyBJ9O1fhPe6fVpGjzOJroVoW2H5adUk";
+        
+        /// <summary>
+        /// Type 'Loving Government Grant Name' in text box
+        /// </summary>
+        public string UIItemEditText = "Loving Government Grant Name";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestInsertInKindItemGovernment'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestInsertInKindItemGovernmentParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Admin' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditText = "Admin";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'Username' text box
+        /// </summary>
+        public string UIUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditSendKeys = "NyBJ9O1fhPe6fVpGjzOJroVoW2H5adUk";
+        
+        /// <summary>
+        /// Type 'Sofa' in text box
+        /// </summary>
+        public string UIItemEditText = "Sofa";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'This is a very nice test sofa.  ' in text box numbered 2 in 'AddInKindItem' window
+        /// </summary>
+        public string UIItemEdit1Text = "This is a very nice test sofa.  ";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UILoginWindow : WpfWindow
     {
@@ -521,10 +1272,42 @@ namespace FCS_Funding_Coded_UI_Tests
                 return this.mUIPatientsTabPage;
             }
         }
+        
+        public UIDonorsTabPage UIDonorsTabPage
+        {
+            get
+            {
+                if ((this.mUIDonorsTabPage == null))
+                {
+                    this.mUIDonorsTabPage = new UIDonorsTabPage(this);
+                }
+                return this.mUIDonorsTabPage;
+            }
+        }
+        
+        public WpfTabPage UIInKindItemTabPage
+        {
+            get
+            {
+                if ((this.mUIInKindItemTabPage == null))
+                {
+                    this.mUIInKindItemTabPage = new WpfTabPage(this);
+                    #region Search Criteria
+                    this.mUIInKindItemTabPage.SearchProperties[WpfTabPage.PropertyNames.Name] = "In-Kind Item";
+                    this.mUIInKindItemTabPage.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIInKindItemTabPage;
+            }
+        }
         #endregion
         
         #region Fields
         private UIPatientsTabPage mUIPatientsTabPage;
+        
+        private UIDonorsTabPage mUIDonorsTabPage;
+        
+        private WpfTabPage mUIInKindItemTabPage;
         #endregion
     }
     
@@ -579,6 +1362,42 @@ namespace FCS_Funding_Coded_UI_Tests
         private WpfButton mUICreateNewPatientButton;
         
         private WpfButton mUIRefreshButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIDonorsTabPage : WpfTabPage
+    {
+        
+        public UIDonorsTabPage(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfTabPage.PropertyNames.Name] = "Donors";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfButton UICreateNewDonorButton
+        {
+            get
+            {
+                if ((this.mUICreateNewDonorButton == null))
+                {
+                    this.mUICreateNewDonorButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUICreateNewDonorButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "CreateNewDon";
+                    this.mUICreateNewDonorButton.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUICreateNewDonorButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfButton mUICreateNewDonorButton;
         #endregion
     }
     
@@ -901,6 +1720,397 @@ namespace FCS_Funding_Coded_UI_Tests
         private WpfComboBox mUIIncomeComboBox;
         
         private WpfButton mUIAddHouseholdButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UICreateNewDonorWindow : WpfWindow
+    {
+        
+        public UICreateNewDonorWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "CreateNewDonor";
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("CreateNewDonor");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.SearchProperties[WpfEdit.PropertyNames.Instance] = "2";
+                    this.mUIItemEdit.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        
+        public WpfEdit UIItemEdit1
+        {
+            get
+            {
+                if ((this.mUIItemEdit1 == null))
+                {
+                    this.mUIItemEdit1 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit1.SearchProperties[WpfEdit.PropertyNames.Instance] = "4";
+                    this.mUIItemEdit1.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit1;
+            }
+        }
+        
+        public WpfEdit UIItemEdit2
+        {
+            get
+            {
+                if ((this.mUIItemEdit2 == null))
+                {
+                    this.mUIItemEdit2 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit2.SearchProperties[WpfEdit.PropertyNames.Instance] = "5";
+                    this.mUIItemEdit2.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit2;
+            }
+        }
+        
+        public WpfEdit UIItemEdit3
+        {
+            get
+            {
+                if ((this.mUIItemEdit3 == null))
+                {
+                    this.mUIItemEdit3 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit3.SearchProperties[WpfEdit.PropertyNames.Instance] = "6";
+                    this.mUIItemEdit3.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit3;
+            }
+        }
+        
+        public WpfComboBox UIDTypeComboBox
+        {
+            get
+            {
+                if ((this.mUIDTypeComboBox == null))
+                {
+                    this.mUIDTypeComboBox = new WpfComboBox(this);
+                    #region Search Criteria
+                    this.mUIDTypeComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "dType";
+                    this.mUIDTypeComboBox.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIDTypeComboBox;
+            }
+        }
+        
+        public WpfButton UIAddDonorButton
+        {
+            get
+            {
+                if ((this.mUIAddDonorButton == null))
+                {
+                    this.mUIAddDonorButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIAddDonorButton.SearchProperties[WpfButton.PropertyNames.Name] = "Add Donor";
+                    this.mUIAddDonorButton.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIAddDonorButton;
+            }
+        }
+        
+        public WpfEdit UIItemEdit4
+        {
+            get
+            {
+                if ((this.mUIItemEdit4 == null))
+                {
+                    this.mUIItemEdit4 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit4.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit4;
+            }
+        }
+        
+        public WpfEdit UIItemEdit5
+        {
+            get
+            {
+                if ((this.mUIItemEdit5 == null))
+                {
+                    this.mUIItemEdit5 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit5.WindowTitles.Add("CreateNewDonor");
+                    #endregion
+                }
+                return this.mUIItemEdit5;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIItemEdit;
+        
+        private WpfEdit mUIItemEdit1;
+        
+        private WpfEdit mUIItemEdit2;
+        
+        private WpfEdit mUIItemEdit3;
+        
+        private WpfComboBox mUIDTypeComboBox;
+        
+        private WpfButton mUIAddDonorButton;
+        
+        private WpfEdit mUIItemEdit4;
+        
+        private WpfEdit mUIItemEdit5;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UICreateIndividualContWindow : WpfWindow
+    {
+        
+        public UICreateIndividualContWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "CreateIndividualContact";
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("CreateIndividualContact");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("CreateIndividualContact");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        
+        public WpfEdit UIItemEdit1
+        {
+            get
+            {
+                if ((this.mUIItemEdit1 == null))
+                {
+                    this.mUIItemEdit1 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit1.SearchProperties[WpfEdit.PropertyNames.Instance] = "2";
+                    this.mUIItemEdit1.WindowTitles.Add("CreateIndividualContact");
+                    #endregion
+                }
+                return this.mUIItemEdit1;
+            }
+        }
+        
+        public WpfEdit UIItemEdit2
+        {
+            get
+            {
+                if ((this.mUIItemEdit2 == null))
+                {
+                    this.mUIItemEdit2 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit2.SearchProperties[WpfEdit.PropertyNames.Instance] = "3";
+                    this.mUIItemEdit2.WindowTitles.Add("CreateIndividualContact");
+                    #endregion
+                }
+                return this.mUIItemEdit2;
+            }
+        }
+        
+        public WpfEdit UIItemEdit3
+        {
+            get
+            {
+                if ((this.mUIItemEdit3 == null))
+                {
+                    this.mUIItemEdit3 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit3.SearchProperties[WpfEdit.PropertyNames.Instance] = "4";
+                    this.mUIItemEdit3.WindowTitles.Add("CreateIndividualContact");
+                    #endregion
+                }
+                return this.mUIItemEdit3;
+            }
+        }
+        
+        public WpfButton UIAddContactButton
+        {
+            get
+            {
+                if ((this.mUIAddContactButton == null))
+                {
+                    this.mUIAddContactButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIAddContactButton.SearchProperties[WpfButton.PropertyNames.Name] = "Add Contact";
+                    this.mUIAddContactButton.WindowTitles.Add("CreateIndividualContact");
+                    #endregion
+                }
+                return this.mUIAddContactButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIItemEdit;
+        
+        private WpfEdit mUIItemEdit1;
+        
+        private WpfEdit mUIItemEdit2;
+        
+        private WpfEdit mUIItemEdit3;
+        
+        private WpfButton mUIAddContactButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIMainWindowWindow1 : WinWindow
+    {
+        
+        public UIMainWindowWindow1()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "MainWindow";
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UICloseButton
+        {
+            get
+            {
+                if ((this.mUICloseButton == null))
+                {
+                    this.mUICloseButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUICloseButton.SearchProperties[WinButton.PropertyNames.Name] = "Close";
+                    this.mUICloseButton.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUICloseButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUICloseButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UICreateGrantProposalWindow : WpfWindow
+    {
+        
+        public UICreateGrantProposalWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "CreateGrantProposal";
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("CreateGrantProposal");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("CreateGrantProposal");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIItemEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIAddInKindItemWindow : WpfWindow
+    {
+        
+        public UIAddInKindItemWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "AddInKindItem";
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("AddInKindItem");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("AddInKindItem");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        
+        public WpfEdit UIItemEdit1
+        {
+            get
+            {
+                if ((this.mUIItemEdit1 == null))
+                {
+                    this.mUIItemEdit1 = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit1.SearchProperties[WpfEdit.PropertyNames.Instance] = "2";
+                    this.mUIItemEdit1.WindowTitles.Add("AddInKindItem");
+                    #endregion
+                }
+                return this.mUIItemEdit1;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIItemEdit;
+        
+        private WpfEdit mUIItemEdit1;
         #endregion
     }
 }

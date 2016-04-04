@@ -54,7 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestInsertDonorAnonymous.cs" />
+    <Compile Include="TestInsertDonorGovernment.cs" />
+    <Compile Include="TestInsertDonorIndividual.cs" />
     <Compile Include="TestInsertDonorOrganization.cs" />
+    <Compile Include="TestInsertGrantProposalGovernment.cs" />
+    <Compile Include="TestInsertInKindItemGovernment.cs" />
     <Compile Include="TestInsertPatient.cs" />
     <Compile Include="TestLogin.cs" />
     <Compile Include="UIMap.cs">
